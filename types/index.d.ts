@@ -3476,6 +3476,8 @@ declare namespace Shopify {
     : T extends 'product_listings/update'
     ? IProductListing
     : T extends 'refunds/create'
+    ? IProductListing
+    : T extends 'refunds/success'
     ? IRefund
     : T extends 'shop/update'
     ? IShop
